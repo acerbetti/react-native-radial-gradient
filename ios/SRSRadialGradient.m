@@ -39,9 +39,9 @@
 
 - (void)setOffset:(CGFloat)offset
 {
-    _gradientCenter = CGPointMake(_radius+offset, _radius+offset);
-    self.gradientLayer.startCenter = _gradientCenter;
-    self.gradientLayer.endCenter = _gradientCenter;
+    CGPoint center = CGPointMake(offset, offset);
+    self.gradientLayer.startCenter = center;
+    self.gradientLayer.endCenter = center;
 }
 
 - (void)setRadius:(CGFloat)radius

@@ -33,9 +33,9 @@ public class RadialGradientManager extends SimpleViewManager<GradientView> {
         gradientView.setColors(colors);
     }
 
-    @ReactProp(name=PROP_CENTER)
+    @ReactProp(name=PROP_OFFSET)
     public void setOffset(GradientView gradientView, float offset) {
-        gradientView.setCenter(gradientView.radius+offset, gradientView.radius+offset);
+        gradientView.setCenter(offset, offset);
     }
 
     @ReactProp(name=PROP_RADIUS)

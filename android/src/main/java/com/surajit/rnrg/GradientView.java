@@ -24,12 +24,12 @@ import com.facebook.react.uimanager.PixelUtil;
 
 public class GradientView extends View {
 
-    protected RectF bounds;
-    protected Paint paint;
-    protected float centerX;
-    protected float centerY;
-    protected float radius;
-    protected int[] colors;
+    private RectF bounds;
+    private Paint paint;
+    private float centerX;
+    private float centerY;
+    private float radius;
+    private int[] colors;
     float[] stops;
 
     public GradientView(Context context) {
@@ -93,11 +93,9 @@ public class GradientView extends View {
         drawGradient();
     }
 
-    public void setCenter(ReadableArray center){
-        if(center == null || center.size()!=2 )
-            return;
-        centerX = PixelUtil.toPixelFromDIP(center.getDouble(0));
-        centerY = PixelUtil.toPixelFromDIP(center.getDouble(1));
+    public void setCenter(float x, float y){
+        centerX = PixelUtil.toPixelFromDIP(x);
+        centerY = PixelUtil.toPixelFromDIP(y);
         drawGradient();
     }
 

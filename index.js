@@ -28,7 +28,7 @@ export default class RadialGradient extends Component {
                 <NativeRadialGradient
                     style={{position: 'absolute', top: 0, left: 0, bottom: 0, right: 0}}
                     colors={(colors)?colors.map(processColor):null}
-                    offset={offset}
+                    offset={radius+offset}
                     radius={radius}
                     stops={stops}
                 />
