@@ -19,10 +19,7 @@ RCT_EXPORT_MODULE();
 }
 
 RCT_EXPORT_VIEW_PROPERTY(colors, NSArray);
-RCT_CUSTOM_VIEW_PROPERTY(center, CGPoint, SRSRadialGradient)
-{
-    view.gradientCenter = [RCTConvert CGPoint:json];
-}
+RCT_EXPORT_VIEW_PROPERTY(offset, CGFloat);
 RCT_EXPORT_VIEW_PROPERTY(radius, CGFloat);
 RCT_EXPORT_VIEW_PROPERTY(stops, NSArray);
 

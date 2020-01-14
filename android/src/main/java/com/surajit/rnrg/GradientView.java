@@ -24,12 +24,12 @@ import com.facebook.react.uimanager.PixelUtil;
 
 public class GradientView extends View {
 
-    private RectF bounds;
-    private Paint paint;
-    private float centerX;
-    private float centerY;
-    private float radius;
-    private int[] colors;
+    protected RectF bounds;
+    protected Paint paint;
+    protected float centerX;
+    protected float centerY;
+    protected float radius;
+    protected int[] colors;
     float[] stops;
 
     public GradientView(Context context) {

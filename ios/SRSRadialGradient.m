@@ -37,11 +37,11 @@
     self.gradientLayer.colors = colors;
 }
 
-- (void)setGradientCenter:(CGPoint)center
+- (void)setOffset:(CGFloat)offset
 {
-    _gradientCenter = center;
-    self.gradientLayer.startCenter = center;
-    self.gradientLayer.endCenter = center;
+    _gradientCenter = CGPointMake(_radius+offset, _radius+offset);
+    self.gradientLayer.startCenter = _gradientCenter;
+    self.gradientLayer.endCenter = _gradientCenter;
 }
 
 - (void)setRadius:(CGFloat)radius

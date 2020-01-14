@@ -4,9 +4,9 @@ import {processColor,requireNativeComponent, ViewPropTypes,View} from 'react-nat
 
 export default class RadialGradient extends Component {
     static propTypes = {
-        center: PropTypes.arrayOf(PropTypes.number),
         colors: PropTypes.arrayOf(PropTypes.string),
         stops: PropTypes.arrayOf(PropTypes.number),
+        offset: PropTypes.number,
         radius: PropTypes.number,
         ...ViewPropTypes,
     };
@@ -16,7 +16,7 @@ export default class RadialGradient extends Component {
             children,
             colors,
             stops,
-            center,
+            offset,
             radius,
             style,
             ...otherProps
@@ -28,7 +28,7 @@ export default class RadialGradient extends Component {
                 <NativeRadialGradient
                     style={{position: 'absolute', top: 0, left: 0, bottom: 0, right: 0}}
                     colors={(colors)?colors.map(processColor):null}
-                    center={center}
+                    offset={offset}
                     radius={radius}
                     stops={stops}
                 />

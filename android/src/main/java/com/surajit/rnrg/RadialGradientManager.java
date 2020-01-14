@@ -14,7 +14,7 @@ public class RadialGradientManager extends SimpleViewManager<GradientView> {
 
     public static final String REACT_CLASS = "SRSRadialGradient";
     public static final String PROP_COLORS = "colors";
-    public static final String PROP_CENTER = "center";
+    public static final String PROP_OFFSET = "offset";
     public static final String PROP_RADIUS = "radius";
     public static final String PROP_STOPS = "stops";
 
@@ -34,8 +34,8 @@ public class RadialGradientManager extends SimpleViewManager<GradientView> {
     }
 
     @ReactProp(name=PROP_CENTER)
-    public void setCenter(GradientView gradientView, ReadableArray center) {
-        gradientView.setCenter(center);
+    public void setOffset(GradientView gradientView, float offset) {
+        gradientView.setCenter(gradientView.radius+offset, gradientView.radius+offset);
     }
 
     @ReactProp(name=PROP_RADIUS)
